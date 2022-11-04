@@ -1,0 +1,16 @@
+.checkout-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .plus,
+  .minus {
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  .remove {
+    cursor: pointer;
+  }
+}

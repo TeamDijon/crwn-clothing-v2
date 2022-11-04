@@ -1,0 +1,22 @@
+.checkout-form-container {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 20px;
+
+  .checkout-intro {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .checkout-items {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    row-gap: 20px;
+  }
+}
