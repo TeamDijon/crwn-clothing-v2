@@ -49,6 +49,10 @@ const reduceCartItemQuantity = (cartItems, productToUpdate) => {
     (cartItem) => cartItem.id === productToUpdate.id
   );
 
+  if (existingCartItem.quantity === 1) {
+    return cartItems.filter((cartItem) => cartItem.id !== productToUpdate.id);
+  }
+
   if (existingCartItem) {
     return cartItems.map((cartItem) =>
       cartItem.id === productToUpdate.id

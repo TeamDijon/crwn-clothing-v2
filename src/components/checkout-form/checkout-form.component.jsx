@@ -10,20 +10,28 @@ const CheckoutForm = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
 
   return (
-    <div className="checkout-form-container">
-      <div className="checkout-intro">
-        <span>Product</span>
-        <span>Description</span>
-        <span>Quantity</span>
-        <span>Price</span>
-        <span>Remove</span>
+    <div className="checkout-container">
+      <div className="checkout-header">
+        <div className="header-block">
+          <span>Product</span>
+        </div>
+        <div className="header-block">
+          <span>Description</span>
+        </div>
+        <div className="header-block">
+          <span>Quantity</span>
+        </div>
+        <div className="header-block">
+          <span>Price</span>
+        </div>
+        <div className="header-block">
+          <span>Remove</span>
+        </div>
       </div>
-      <div className="checkout-items">
-        {cartItems.map((item) => (
-          <CheckoutItem key={item.id} item={item} />
-        ))}
-      </div>
-      <span>{cartTotal}</span>
+      {cartItems.map((item) => (
+        <CheckoutItem key={item.id} item={item} />
+      ))}
+      <span className="total">Total: ${cartTotal}</span>
     </div>
   );
 };
